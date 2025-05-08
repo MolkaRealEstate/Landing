@@ -108,6 +108,16 @@
           "id": "t6HSYjWD_fxj",
           "name": "Icon6Icon",
           "moduleFilePath": "plasmic/landing/icons/PlasmicIcon__Icon6.tsx"
+        },
+        {
+          "id": "nHpIsy9gSEtA",
+          "name": "Icon10Icon",
+          "moduleFilePath": "plasmic/landing/icons/PlasmicIcon__Icon10.tsx"
+        },
+        {
+          "id": "mtinV-a5FmX1",
+          "name": "Icon11Icon",
+          "moduleFilePath": "plasmic/landing/icons/PlasmicIcon__Icon11.tsx"
         }
       ],
       "images": [
@@ -428,7 +438,8 @@
           "componentImportPath": "@plasmicpkgs/react-aria/skinny/registerDialog"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "7GsYLBFUNeTrFmDS32b5nF",
@@ -564,7 +575,8 @@
           "componentImportPath": "./../../../src/components/Carousel"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     }
   ],
   "globalVariants": {

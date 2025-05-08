@@ -38,9 +38,10 @@
   top: auto;
   margin-bottom: 0px;
   justify-self: center;
-  height: 760px;
+  height: 100%;
   grid-column-start: 1 !important;
   grid-column-end: -1 !important;
+  min-height: 0;
   grid-template-columns:
     var(--plsmc-viewport-gap) 1fr minmax(0, var(--plsmc-wide-chunk))
     min(
@@ -89,7 +90,7 @@
   max-width: 100%;
   justify-content: flex-end;
   align-items: center;
-  padding-bottom: 0px;
+  padding-bottom: 135px;
   margin: 238px 0px 0px;
 }
 @media (min-width: 0px) and (max-width: 768px) {
@@ -99,39 +100,19 @@
 }
 .shahrzadTitleLogo {
   object-fit: cover;
-  max-width: 261px;
+  max-width: 100%;
   width: 261px;
-  margin: 0px 0px -40px;
+  height: 173px;
+  margin-bottom: 145px;
+  flex-shrink: 0;
 }
-.shahrzadTitleLogo > picture > img {
+.svg__aHVvg {
   object-fit: cover;
-}
-.shahrzadDescription {
-  position: relative;
-  width: auto;
-  height: auto;
   max-width: 100%;
-  text-align: center;
   color: #ffffff;
-  font-weight: 700;
-  font-size: 28px;
-  font-style: normal;
-  text-transform: none;
-  line-height: 1.5;
-  letter-spacing: normal;
-  white-space: pre-wrap;
-  user-select: text;
-  text-decoration-line: none;
-  text-overflow: clip;
-}
-.chevronDown {
-  object-fit: cover;
-  max-width: 100%;
-  color: #fff;
   width: 40px;
   height: 20px;
   flex-shrink: 0;
-  margin: 112px 0px 0px;
 }
 .quckReview {
   display: grid;
@@ -2585,6 +2566,13 @@
 }
 .section__xHx93 > * {
   grid-column: 4;
+}
+.text___1CIgE {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  min-width: 0;
 }
 .section__dx49N {
   display: grid;

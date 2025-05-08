@@ -69,7 +69,8 @@ import plasmic_core_components_css from "../core_components/plasmic.module.css";
 import projectcss from "./plasmic.module.css"; // plasmic-import: vq7XJ7DbJpq1nH6AyrrWJR/projectcss
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: oMglkW4KgM9r/css
 
-import ChevronDownIconIcon from "./icons/PlasmicIcon__ChevronDownIcon"; // plasmic-import: 5YDRjSTeyzGE/icon
+import Icon10Icon from "./icons/PlasmicIcon__Icon10"; // plasmic-import: nHpIsy9gSEtA/icon
+import Icon11Icon from "./icons/PlasmicIcon__Icon11"; // plasmic-import: mtinV-a5FmX1/icon
 import BedIconIcon from "./icons/PlasmicIcon__BedIcon"; // plasmic-import: LDPcNd9zXit1/icon
 import MoneyIconIcon from "./icons/PlasmicIcon__MoneyIcon"; // plasmic-import: I0dqEmIk_aax/icon
 import RulerIconIcon from "./icons/PlasmicIcon__RulerIcon"; // plasmic-import: tYdKwIELoJ9K/icon
@@ -93,9 +94,7 @@ export type PlasmicHomepage__OverridesType = {
   billboard?: Flex__<"section">;
   mwdNavigationBar?: Flex__<typeof MwdNavigationBar>;
   title?: Flex__<"div">;
-  shahrzadTitleLogo?: Flex__<typeof PlasmicImg__>;
-  shahrzadDescription?: Flex__<"div">;
-  chevronDown?: Flex__<"svg">;
+  shahrzadTitleLogo?: Flex__<"svg">;
   quckReview?: Flex__<"section">;
   quickReviewItems?: Flex__<"div">;
   roomVariety?: Flex__<"div">;
@@ -282,43 +281,15 @@ function PlasmicHomepage__RenderFunc(props: {
               data-plasmic-override={overrides.title}
               className={classNames(projectcss.all, sty.title)}
             >
-              <PlasmicImg__
+              <Icon10Icon
                 data-plasmic-name={"shahrzadTitleLogo"}
                 data-plasmic-override={overrides.shahrzadTitleLogo}
-                alt={""}
-                className={classNames(sty.shahrzadTitleLogo)}
-                displayHeight={"auto"}
-                displayMaxHeight={"none"}
-                displayMaxWidth={"261px"}
-                displayMinHeight={"0"}
-                displayMinWidth={"0"}
-                displayWidth={"261px"}
-                loading={"lazy"}
-                src={{
-                  src: "/plasmic/landing/images/image22.svg",
-                  fullWidth: 261,
-                  fullHeight: 173,
-                  aspectRatio: 1.508671
-                }}
+                className={classNames(projectcss.all, sty.shahrzadTitleLogo)}
+                role={"img"}
               />
 
-              <div
-                data-plasmic-name={"shahrzadDescription"}
-                data-plasmic-override={overrides.shahrzadDescription}
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.shahrzadDescription
-                )}
-              >
-                {
-                  "\u0632\u0646\u062f\u06af\u06cc \u0645\u062f\u0631\u0646 \u0628\u0627 \u0631\u0641\u0627\u0647 \u0648 \u0627\u0645\u06a9\u0627\u0646\u0627\u062a \u06cc\u06a9 \u0634\u0647\u0631 "
-                }
-              </div>
-              <ChevronDownIconIcon
-                data-plasmic-name={"chevronDown"}
-                data-plasmic-override={overrides.chevronDown}
-                className={classNames(projectcss.all, sty.chevronDown)}
+              <Icon11Icon
+                className={classNames(projectcss.all, sty.svg__aHVvg)}
                 role={"img"}
               />
             </div>
@@ -1914,7 +1885,17 @@ function PlasmicHomepage__RenderFunc(props: {
             <section
               className={classNames(projectcss.all, sty.section__xHx93)}
               id={"consult-request"}
-            />
+            >
+              <div
+                className={classNames(
+                  projectcss.all,
+                  projectcss.__wab_text,
+                  sty.text___1CIgE
+                )}
+              >
+                {"This is a test for n8n webhook"}
+              </div>
+            </section>
           </section>
           <section className={classNames(projectcss.all, sty.section__dx49N)}>
             <div className={classNames(projectcss.all, sty.freeBox__bW6CA)}>
@@ -1998,8 +1979,6 @@ const PlasmicDescendants = {
     "mwdNavigationBar",
     "title",
     "shahrzadTitleLogo",
-    "shahrzadDescription",
-    "chevronDown",
     "quckReview",
     "quickReviewItems",
     "roomVariety",
@@ -2086,19 +2065,10 @@ const PlasmicDescendants = {
     "namingText2",
     "aboutMolka"
   ],
-  billboard: [
-    "billboard",
-    "mwdNavigationBar",
-    "title",
-    "shahrzadTitleLogo",
-    "shahrzadDescription",
-    "chevronDown"
-  ],
+  billboard: ["billboard", "mwdNavigationBar", "title", "shahrzadTitleLogo"],
   mwdNavigationBar: ["mwdNavigationBar"],
-  title: ["title", "shahrzadTitleLogo", "shahrzadDescription", "chevronDown"],
+  title: ["title", "shahrzadTitleLogo"],
   shahrzadTitleLogo: ["shahrzadTitleLogo"],
-  shahrzadDescription: ["shahrzadDescription"],
-  chevronDown: ["chevronDown"],
   quckReview: [
     "quckReview",
     "quickReviewItems",
@@ -2432,9 +2402,7 @@ type NodeDefaultElementType = {
   billboard: "section";
   mwdNavigationBar: typeof MwdNavigationBar;
   title: "div";
-  shahrzadTitleLogo: typeof PlasmicImg__;
-  shahrzadDescription: "div";
-  chevronDown: "svg";
+  shahrzadTitleLogo: "svg";
   quckReview: "section";
   quickReviewItems: "div";
   roomVariety: "div";
@@ -2586,8 +2554,6 @@ export const PlasmicHomepage = Object.assign(
     mwdNavigationBar: makeNodeComponent("mwdNavigationBar"),
     title: makeNodeComponent("title"),
     shahrzadTitleLogo: makeNodeComponent("shahrzadTitleLogo"),
-    shahrzadDescription: makeNodeComponent("shahrzadDescription"),
-    chevronDown: makeNodeComponent("chevronDown"),
     quckReview: makeNodeComponent("quckReview"),
     quickReviewItems: makeNodeComponent("quickReviewItems"),
     roomVariety: makeNodeComponent("roomVariety"),
