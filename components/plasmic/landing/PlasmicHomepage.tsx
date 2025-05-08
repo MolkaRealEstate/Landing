@@ -59,6 +59,7 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
+import { Modal } from "../../../../../../src/fragment/components/Modal"; // plasmic-import: h30UR6Lg_L-j/codeComponent
 import MwdNavigationBar from "../../MwdNavigationBar"; // plasmic-import: C-aKeh77M_Fc/component
 
 import { useScreenVariants as useScreenVariantsiatb7RnTn0Gb } from "../core_components/PlasmicGlobalVariant__Screen"; // plasmic-import: Iatb7rnTn0Gb/globalVariant
@@ -91,6 +92,7 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
+  modal?: Flex__<typeof Modal>;
   billboard?: Flex__<"section">;
   mwdNavigationBar?: Flex__<typeof MwdNavigationBar>;
   title?: Flex__<"div">;
@@ -223,6 +225,24 @@ function PlasmicHomepage__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
+  const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
+    () => [
+      {
+        path: "modal.isModalOpen",
+        type: "private",
+        variableType: "boolean",
+        initFunc: ({ $props, $state, $queries, $ctx }) => true
+      }
+    ],
+    [$props, $ctx, $refs]
+  );
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: {},
+    $refs
+  });
+
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsiatb7RnTn0Gb()
   });
@@ -255,6 +275,32 @@ function PlasmicHomepage__RenderFunc(props: {
           dir={"rtl"}
           lang={"fa"}
         >
+          <Modal
+            data-plasmic-name={"modal"}
+            data-plasmic-override={overrides.modal}
+            backdrop={"opaque"}
+            className={classNames("__wab_instance", sty.modal)}
+            hasCloseXButton={true}
+            hasModalFooter={true}
+            hasModalHeader={true}
+            height={"300"}
+            isModalOpen={generateStateValueProp($state, [
+              "modal",
+              "isModalOpen"
+            ])}
+            modalPosition={"center"}
+            modalStyle={{}}
+            onModalOpenChange={async (...eventArgs: any) => {
+              generateStateOnChangeProp($state, ["modal", "isModalOpen"]).apply(
+                null,
+                eventArgs
+              );
+            }}
+            scroll={"normal"}
+            size={"md"}
+            width={"200"}
+          />
+
           <section
             data-plasmic-name={"billboard"}
             data-plasmic-override={overrides.billboard}
@@ -281,13 +327,14 @@ function PlasmicHomepage__RenderFunc(props: {
               data-plasmic-override={overrides.title}
               className={classNames(projectcss.all, sty.title)}
             >
-              <Icon10Icon
-                data-plasmic-name={"shahrzadTitleLogo"}
-                data-plasmic-override={overrides.shahrzadTitleLogo}
-                className={classNames(projectcss.all, sty.shahrzadTitleLogo)}
-                role={"img"}
-              />
-
+              <div className={classNames(projectcss.all, sty.freeBox__ie2Vu)}>
+                <Icon10Icon
+                  data-plasmic-name={"shahrzadTitleLogo"}
+                  data-plasmic-override={overrides.shahrzadTitleLogo}
+                  className={classNames(projectcss.all, sty.shahrzadTitleLogo)}
+                  role={"img"}
+                />
+              </div>
               <Icon11Icon
                 className={classNames(projectcss.all, sty.svg__aHVvg)}
                 role={"img"}
@@ -1882,20 +1929,6 @@ function PlasmicHomepage__RenderFunc(props: {
                 }
               />
             </div>
-            <section
-              className={classNames(projectcss.all, sty.section__xHx93)}
-              id={"consult-request"}
-            >
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text___1CIgE
-                )}
-              >
-                {"This is a test for n8n webhook"}
-              </div>
-            </section>
           </section>
           <section className={classNames(projectcss.all, sty.section__dx49N)}>
             <div className={classNames(projectcss.all, sty.freeBox__bW6CA)}>
@@ -1975,6 +2008,7 @@ function PlasmicHomepage__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
+    "modal",
     "billboard",
     "mwdNavigationBar",
     "title",
@@ -2065,6 +2099,7 @@ const PlasmicDescendants = {
     "namingText2",
     "aboutMolka"
   ],
+  modal: ["modal"],
   billboard: ["billboard", "mwdNavigationBar", "title", "shahrzadTitleLogo"],
   mwdNavigationBar: ["mwdNavigationBar"],
   title: ["title", "shahrzadTitleLogo"],
@@ -2399,6 +2434,7 @@ type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
+  modal: typeof Modal;
   billboard: "section";
   mwdNavigationBar: typeof MwdNavigationBar;
   title: "div";
@@ -2550,6 +2586,7 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
+    modal: makeNodeComponent("modal"),
     billboard: makeNodeComponent("billboard"),
     mwdNavigationBar: makeNodeComponent("mwdNavigationBar"),
     title: makeNodeComponent("title"),
