@@ -1,5 +1,216 @@
 {
-  "props": [],
+  "props": [
+    {
+      "name": "Background/10",
+      "type": "color",
+      "value": "#15171A",
+      "category": "color",
+      "meta": {
+        "projectId": "7GsYLBFUNeTrFmDS32b5nF",
+        "id": "mbRfskdun7pU"
+      }
+    },
+    {
+      "name": "Basic/Border",
+      "type": "color",
+      "value": "#D1D5DB",
+      "category": "color",
+      "meta": {
+        "projectId": "7GsYLBFUNeTrFmDS32b5nF",
+        "id": "6YtoUnVd96Vk"
+      }
+    },
+    {
+      "name": "Basic/Text-Primary",
+      "type": "color",
+      "value": "#030712",
+      "category": "color",
+      "meta": {
+        "projectId": "7GsYLBFUNeTrFmDS32b5nF",
+        "id": "ipVMQH79npHu"
+      }
+    },
+    {
+      "name": "Basic/Text-Secondary",
+      "type": "color",
+      "value": "#6B7280",
+      "category": "color",
+      "meta": {
+        "projectId": "7GsYLBFUNeTrFmDS32b5nF",
+        "id": "AcNI0KyeHOZU"
+      }
+    },
+    {
+      "name": "Basic/Text-Secondary",
+      "type": "color",
+      "value": "#6B7280",
+      "category": "color",
+      "meta": {
+        "projectId": "vq7XJ7DbJpq1nH6AyrrWJR",
+        "id": "1S8TysrEa0SD"
+      }
+    },
+    {
+      "name": "Brand/Brand",
+      "type": "color",
+      "value": "#2563EB",
+      "category": "color",
+      "meta": {
+        "projectId": "7GsYLBFUNeTrFmDS32b5nF",
+        "id": "bH4VDybr-SEd"
+      }
+    },
+    {
+      "name": "Destructive/Destructive",
+      "type": "color",
+      "value": "#DC2626",
+      "category": "color",
+      "meta": {
+        "projectId": "7GsYLBFUNeTrFmDS32b5nF",
+        "id": "OJjsasJsvX3-"
+      }
+    },
+    {
+      "name": "Font-LG",
+      "type": "fontsize",
+      "value": "1.25rem",
+      "category": "fontsize",
+      "meta": {
+        "projectId": "7GsYLBFUNeTrFmDS32b5nF",
+        "id": "jNErpVpayTRo"
+      }
+    },
+    {
+      "name": "Font-MD",
+      "type": "fontsize",
+      "value": "1rem",
+      "category": "fontsize",
+      "meta": {
+        "projectId": "7GsYLBFUNeTrFmDS32b5nF",
+        "id": "_q3JZqmzXDWf"
+      }
+    },
+    {
+      "name": "Font-SM",
+      "type": "fontsize",
+      "value": "0.75rem",
+      "category": "fontsize",
+      "meta": {
+        "projectId": "7GsYLBFUNeTrFmDS32b5nF",
+        "id": "W4y-nq4gImvk"
+      }
+    },
+    {
+      "name": "Line-height-LG",
+      "type": "lineheight",
+      "value": "1.4",
+      "category": "lineheight",
+      "meta": {
+        "projectId": "7GsYLBFUNeTrFmDS32b5nF",
+        "id": "Ri1d95UMqaKY"
+      }
+    },
+    {
+      "name": "Line-height-MD",
+      "type": "lineheight",
+      "value": "1.25",
+      "category": "lineheight",
+      "meta": {
+        "projectId": "7GsYLBFUNeTrFmDS32b5nF",
+        "id": "O8PhoA_rabRC"
+      }
+    },
+    {
+      "name": "Line-height-SM",
+      "type": "lineheight",
+      "value": "1",
+      "category": "lineheight",
+      "meta": {
+        "projectId": "7GsYLBFUNeTrFmDS32b5nF",
+        "id": "Kl7MAjr-_M3b"
+      }
+    },
+    {
+      "name": "Muted/Muted-Soft",
+      "type": "color",
+      "value": "#F3F4F6",
+      "category": "color",
+      "meta": {
+        "projectId": "7GsYLBFUNeTrFmDS32b5nF",
+        "id": "Qy_g89d6jeRd"
+      }
+    },
+    {
+      "name": "Muted/Muted-Soft-Hover",
+      "type": "color",
+      "value": "#E5E7EB",
+      "category": "color",
+      "meta": {
+        "projectId": "7GsYLBFUNeTrFmDS32b5nF",
+        "id": "qxWAGQseyv6f"
+      }
+    },
+    {
+      "name": "Sans-serif",
+      "type": "fontfamily",
+      "value": "Inter",
+      "category": "fontfamily",
+      "meta": {
+        "projectId": "7GsYLBFUNeTrFmDS32b5nF",
+        "id": "3M5Zj3JjPAf2"
+      }
+    },
+    {
+      "name": "Size-10",
+      "type": "spacing",
+      "value": "0.625rem",
+      "category": "spacing",
+      "meta": {
+        "projectId": "7GsYLBFUNeTrFmDS32b5nF",
+        "id": "cKEkuYRemfPn"
+      }
+    },
+    {
+      "name": "Size-2",
+      "type": "spacing",
+      "value": "0.125rem",
+      "category": "spacing",
+      "meta": {
+        "projectId": "7GsYLBFUNeTrFmDS32b5nF",
+        "id": "ssF9mhvu0d3Q"
+      }
+    },
+    {
+      "name": "Size-32",
+      "type": "spacing",
+      "value": "2rem",
+      "category": "spacing",
+      "meta": {
+        "projectId": "7GsYLBFUNeTrFmDS32b5nF",
+        "id": "BZBYjqQPX1lL"
+      }
+    },
+    {
+      "name": "Size-4",
+      "type": "spacing",
+      "value": "0.25rem",
+      "category": "spacing",
+      "meta": {
+        "projectId": "7GsYLBFUNeTrFmDS32b5nF",
+        "id": "a9GfbB5X9Jsk"
+      }
+    },
+    {
+      "name": "Size-6",
+      "type": "spacing",
+      "value": "0.375rem",
+      "category": "spacing",
+      "meta": {
+        "projectId": "7GsYLBFUNeTrFmDS32b5nF",
+        "id": "zALqbmQDN_XV"
+      }
+    }
+  ],
   "global": {
     "meta": {
       "source": "plasmic.app"

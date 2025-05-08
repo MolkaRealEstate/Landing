@@ -1,0 +1,21 @@
+.root {
+  display: inline-flex;
+  flex-direction: column;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  justify-self: flex-start;
+}
+.root:hover {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+}
+.text {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}

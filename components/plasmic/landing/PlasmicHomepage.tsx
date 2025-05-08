@@ -59,10 +59,13 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
-import { useScreenVariants as useScreenVariantsggWlqlBnNAjZ } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: ggWLQLBnNAjZ/globalVariant
+import MwdNavigationBar from "../../MwdNavigationBar"; // plasmic-import: C-aKeh77M_Fc/component
+
+import { useScreenVariants as useScreenVariantsiatb7RnTn0Gb } from "../core_components/PlasmicGlobalVariant__Screen"; // plasmic-import: Iatb7rnTn0Gb/globalVariant
 
 import "@plasmicapp/react-web/lib/plasmic.css";
 
+import plasmic_core_components_css from "../core_components/plasmic.module.css"; // plasmic-import: 7GsYLBFUNeTrFmDS32b5nF/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: vq7XJ7DbJpq1nH6AyrrWJR/projectcss
 import sty from "./PlasmicHomepage.module.css"; // plasmic-import: oMglkW4KgM9r/css
 
@@ -88,6 +91,7 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
   billboard?: Flex__<"section">;
+  mwdNavigationBar?: Flex__<typeof MwdNavigationBar>;
   title?: Flex__<"div">;
   shahrzadTitleLogo?: Flex__<typeof PlasmicImg__>;
   shahrzadDescription?: Flex__<"div">;
@@ -221,7 +225,7 @@ function PlasmicHomepage__RenderFunc(props: {
   const $refs = refsRef.current;
 
   const globalVariants = ensureGlobalVariants({
-    screen: useScreenVariantsggWlqlBnNAjZ()
+    screen: useScreenVariantsiatb7RnTn0Gb()
   });
 
   return (
@@ -246,6 +250,7 @@ function PlasmicHomepage__RenderFunc(props: {
             projectcss.plasmic_default_styles,
             projectcss.plasmic_mixins,
             projectcss.plasmic_tokens,
+            plasmic_core_components_css.plasmic_tokens,
             sty.root
           )}
           dir={"rtl"}
@@ -256,6 +261,22 @@ function PlasmicHomepage__RenderFunc(props: {
             data-plasmic-override={overrides.billboard}
             className={classNames(projectcss.all, sty.billboard)}
           >
+            <MwdNavigationBar
+              data-plasmic-name={"mwdNavigationBar"}
+              data-plasmic-override={overrides.mwdNavigationBar}
+              className={classNames("__wab_instance", sty.mwdNavigationBar)}
+              menuItems={[
+                {
+                  name: "\u062f\u0631\u0628\u0627\u0631\u0647 \u0634\u0647\u0631\u0632\u0627\u062f"
+                },
+                { name: "\u0645\u0648\u0642\u0639\u06cc\u062a" },
+                {
+                  name: "\u0637\u0631\u0627\u062d\u06cc \u062f\u0627\u062e\u0644\u06cc"
+                },
+                { name: "\u0627\u0645\u06a9\u0627\u0646\u0627\u062a" }
+              ]}
+            />
+
             <div
               data-plasmic-name={"title"}
               data-plasmic-override={overrides.title}
@@ -1890,6 +1911,10 @@ function PlasmicHomepage__RenderFunc(props: {
                 }
               />
             </div>
+            <section
+              className={classNames(projectcss.all, sty.section__xHx93)}
+              id={"consult-request"}
+            />
           </section>
           <section className={classNames(projectcss.all, sty.section__dx49N)}>
             <div className={classNames(projectcss.all, sty.freeBox__bW6CA)}>
@@ -1970,6 +1995,7 @@ const PlasmicDescendants = {
   root: [
     "root",
     "billboard",
+    "mwdNavigationBar",
     "title",
     "shahrzadTitleLogo",
     "shahrzadDescription",
@@ -2062,11 +2088,13 @@ const PlasmicDescendants = {
   ],
   billboard: [
     "billboard",
+    "mwdNavigationBar",
     "title",
     "shahrzadTitleLogo",
     "shahrzadDescription",
     "chevronDown"
   ],
+  mwdNavigationBar: ["mwdNavigationBar"],
   title: ["title", "shahrzadTitleLogo", "shahrzadDescription", "chevronDown"],
   shahrzadTitleLogo: ["shahrzadTitleLogo"],
   shahrzadDescription: ["shahrzadDescription"],
@@ -2402,6 +2430,7 @@ type DescendantsType<T extends NodeNameType> =
 type NodeDefaultElementType = {
   root: "div";
   billboard: "section";
+  mwdNavigationBar: typeof MwdNavigationBar;
   title: "div";
   shahrzadTitleLogo: typeof PlasmicImg__;
   shahrzadDescription: "div";
@@ -2554,6 +2583,7 @@ export const PlasmicHomepage = Object.assign(
   {
     // Helper components rendering sub-elements
     billboard: makeNodeComponent("billboard"),
+    mwdNavigationBar: makeNodeComponent("mwdNavigationBar"),
     title: makeNodeComponent("title"),
     shahrzadTitleLogo: makeNodeComponent("shahrzadTitleLogo"),
     shahrzadDescription: makeNodeComponent("shahrzadDescription"),
