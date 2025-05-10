@@ -156,7 +156,11 @@ function PlasmicMwdNavigationBar__RenderFunc(props: {
       dir={"rtl"}
       lang={"fa"}
     >
-      <div className={classNames(projectcss.all, sty.freeBox__nC7C1)}>
+      <Stack__
+        as={"div"}
+        hasGap={true}
+        className={classNames(projectcss.all, sty.freeBox__nC7C1)}
+      >
         {(_par => (!_par ? [] : Array.isArray(_par) ? _par : [_par]))(
           (() => {
             try {
@@ -203,7 +207,7 @@ function PlasmicMwdNavigationBar__RenderFunc(props: {
             </div>
           );
         })}
-      </div>
+      </Stack__>
       <MwdButton
         data-plasmic-name={"mwdButton"}
         data-plasmic-override={overrides.mwdButton}

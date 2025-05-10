@@ -59,7 +59,6 @@ import {
   useGlobalActions
 } from "@plasmicapp/react-web/lib/host";
 
-import { Modal } from "../../../../../../src/fragment/components/Modal"; // plasmic-import: h30UR6Lg_L-j/codeComponent
 import MwdNavigationBar from "../../MwdNavigationBar"; // plasmic-import: C-aKeh77M_Fc/component
 
 import { useScreenVariants as useScreenVariantsiatb7RnTn0Gb } from "../core_components/PlasmicGlobalVariant__Screen"; // plasmic-import: Iatb7rnTn0Gb/globalVariant
@@ -75,6 +74,9 @@ import Icon11Icon from "./icons/PlasmicIcon__Icon11"; // plasmic-import: mtinV-a
 import BedIconIcon from "./icons/PlasmicIcon__BedIcon"; // plasmic-import: LDPcNd9zXit1/icon
 import MoneyIconIcon from "./icons/PlasmicIcon__MoneyIcon"; // plasmic-import: I0dqEmIk_aax/icon
 import RulerIconIcon from "./icons/PlasmicIcon__RulerIcon"; // plasmic-import: tYdKwIELoJ9K/icon
+import Icon12Icon from "./icons/PlasmicIcon__Icon12"; // plasmic-import: cuu-3l1WTiO_/icon
+import Icon13Icon from "./icons/PlasmicIcon__Icon13"; // plasmic-import: XJmWDpjKKXWB/icon
+import Icon14Icon from "./icons/PlasmicIcon__Icon14"; // plasmic-import: r5yguWMgSqn0/icon
 import Icon3Icon from "./icons/PlasmicIcon__Icon3"; // plasmic-import: Z15N-HQt9-GO/icon
 import Icon2Icon from "./icons/PlasmicIcon__Icon2"; // plasmic-import: kssra6IqTZ0g/icon
 import IconIcon from "./icons/PlasmicIcon__Icon"; // plasmic-import: 7pS5oulIzmRU/icon
@@ -92,7 +94,6 @@ export const PlasmicHomepage__ArgProps = new Array<ArgPropType>();
 
 export type PlasmicHomepage__OverridesType = {
   root?: Flex__<"div">;
-  modal?: Flex__<typeof Modal>;
   billboard?: Flex__<"section">;
   mwdNavigationBar?: Flex__<typeof MwdNavigationBar>;
   title?: Flex__<"div">;
@@ -182,6 +183,10 @@ export type PlasmicHomepage__OverridesType = {
   namingText1?: Flex__<"div">;
   namingText2?: Flex__<"div">;
   aboutMolka?: Flex__<"section">;
+  askShahrzad?: Flex__<"section">;
+  footer?: Flex__<"section">;
+  text?: Flex__<"div">;
+  address?: Flex__<"div">;
 };
 
 export interface DefaultHomepageProps {}
@@ -225,24 +230,6 @@ function PlasmicHomepage__RenderFunc(props: {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
 
-  const stateSpecs: Parameters<typeof useDollarState>[0] = React.useMemo(
-    () => [
-      {
-        path: "modal.isModalOpen",
-        type: "private",
-        variableType: "boolean",
-        initFunc: ({ $props, $state, $queries, $ctx }) => true
-      }
-    ],
-    [$props, $ctx, $refs]
-  );
-  const $state = useDollarState(stateSpecs, {
-    $props,
-    $ctx,
-    $queries: {},
-    $refs
-  });
-
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsiatb7RnTn0Gb()
   });
@@ -275,32 +262,6 @@ function PlasmicHomepage__RenderFunc(props: {
           dir={"rtl"}
           lang={"fa"}
         >
-          <Modal
-            data-plasmic-name={"modal"}
-            data-plasmic-override={overrides.modal}
-            backdrop={"opaque"}
-            className={classNames("__wab_instance", sty.modal)}
-            hasCloseXButton={true}
-            hasModalFooter={true}
-            hasModalHeader={true}
-            height={"300"}
-            isModalOpen={generateStateValueProp($state, [
-              "modal",
-              "isModalOpen"
-            ])}
-            modalPosition={"center"}
-            modalStyle={{}}
-            onModalOpenChange={async (...eventArgs: any) => {
-              generateStateOnChangeProp($state, ["modal", "isModalOpen"]).apply(
-                null,
-                eventArgs
-              );
-            }}
-            scroll={"normal"}
-            size={"md"}
-            width={"200"}
-          />
-
           <section
             data-plasmic-name={"billboard"}
             data-plasmic-override={overrides.billboard}
@@ -327,14 +288,13 @@ function PlasmicHomepage__RenderFunc(props: {
               data-plasmic-override={overrides.title}
               className={classNames(projectcss.all, sty.title)}
             >
-              <div className={classNames(projectcss.all, sty.freeBox__ie2Vu)}>
-                <Icon10Icon
-                  data-plasmic-name={"shahrzadTitleLogo"}
-                  data-plasmic-override={overrides.shahrzadTitleLogo}
-                  className={classNames(projectcss.all, sty.shahrzadTitleLogo)}
-                  role={"img"}
-                />
-              </div>
+              <Icon10Icon
+                data-plasmic-name={"shahrzadTitleLogo"}
+                data-plasmic-override={overrides.shahrzadTitleLogo}
+                className={classNames(projectcss.all, sty.shahrzadTitleLogo)}
+                role={"img"}
+              />
+
               <Icon11Icon
                 className={classNames(projectcss.all, sty.svg__aHVvg)}
                 role={"img"}
@@ -572,22 +532,9 @@ function PlasmicHomepage__RenderFunc(props: {
                 <div
                   className={classNames(projectcss.all, sty.freeBox___4AucG)}
                 >
-                  <PlasmicImg__
-                    alt={""}
-                    className={classNames(sty.img__cdxyk)}
-                    displayHeight={"40px"}
-                    displayMaxHeight={"none"}
-                    displayMaxWidth={"100%"}
-                    displayMinHeight={"0"}
-                    displayMinWidth={"0"}
-                    displayWidth={"40px"}
-                    loading={"lazy"}
-                    src={{
-                      src: "/plasmic/landing/images/image.svg",
-                      fullWidth: 40,
-                      fullHeight: 40,
-                      aspectRatio: 1
-                    }}
+                  <Icon12Icon
+                    className={classNames(projectcss.all, sty.svg__g82Oi)}
+                    role={"img"}
                   />
 
                   <div
@@ -628,22 +575,9 @@ function PlasmicHomepage__RenderFunc(props: {
                 />
 
                 <div className={classNames(projectcss.all, sty.freeBox__e6VHc)}>
-                  <PlasmicImg__
-                    alt={""}
-                    className={classNames(sty.img__g8ZgK)}
-                    displayHeight={"40px"}
-                    displayMaxHeight={"none"}
-                    displayMaxWidth={"100%"}
-                    displayMinHeight={"0"}
-                    displayMinWidth={"0"}
-                    displayWidth={"40px"}
-                    loading={"lazy"}
-                    src={{
-                      src: "/plasmic/landing/images/image2.svg",
-                      fullWidth: 40,
-                      fullHeight: 40,
-                      aspectRatio: 1
-                    }}
+                  <Icon13Icon
+                    className={classNames(projectcss.all, sty.svg___9Qhv5)}
+                    role={"img"}
                   />
 
                   <div
@@ -696,22 +630,9 @@ function PlasmicHomepage__RenderFunc(props: {
                 <div
                   className={classNames(projectcss.all, sty.freeBox___7CCsB)}
                 >
-                  <PlasmicImg__
-                    alt={""}
-                    className={classNames(sty.img__iCs92)}
-                    displayHeight={"40px"}
-                    displayMaxHeight={"none"}
-                    displayMaxWidth={"100%"}
-                    displayMinHeight={"0"}
-                    displayMinWidth={"0"}
-                    displayWidth={"40px"}
-                    loading={"lazy"}
-                    src={{
-                      src: "/plasmic/landing/images/image5.svg",
-                      fullWidth: 40,
-                      fullHeight: 40,
-                      aspectRatio: 1
-                    }}
+                  <Icon14Icon
+                    className={classNames(projectcss.all, sty.svg__wsrUo)}
+                    role={"img"}
                   />
 
                   <div
@@ -1818,7 +1739,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   )}
                 >
                   {
-                    '\u062f\u0631 \u062f\u0644 \u0627\u0641\u0633\u0627\u0646\u0647\u200c\u0647\u0627\u06cc \u0628\u0627\u0634\u06a9\u0648\u0647 \u0648 \u062f\u0627\u0633\u062a\u0627\u0646\u200c\u0647\u0627\u06cc \u062f\u0644\u200c\u0627\u0646\u06af\u06cc\u0632 \u0627\u06cc\u0631\u0627\u0646\u200c\u0632\u0645\u06cc\u0646\u060c \u0646\u0627\u0645\n"\u0634\u0647\u0631\u0632\u0627\u062f" \u0647\u0645\u0686\u0646\u0627\u0646 \u0645\u06cc\u200c\u062f\u0631\u062e\u0634\u062f\u061b \u0628\u0627\u0646\u0648\u06cc\u06cc \u06a9\u0647 \u0628\u0627 \u0647\u0646\u0631 \u0631\u0648\u0627\u06cc\u062a\u06af\u0631\u06cc\u200c\u0627\u0634\u060c\n\u0633\u0631\u0646\u0648\u0634\u062a\u06cc \u0646\u0648 \u0628\u0631\u0627\u06cc \u0634\u0647\u0631\u06cc\u0627\u0631 \u0648 \u0645\u0631\u062f\u0645\u0627\u0646\u0634 \u0631\u0642\u0645 \u0632\u062f. \u0627\u06a9\u0646\u0648\u0646 \u0627\u06cc\u0646 \u0627\u0641\u0633\u0627\u0646\u0647 \u062f\u0631\n\u067e\u0631\u0648\u0698\u0647\u200c\u06cc \u0645\u0633\u06a9\u0648\u0646\u06cc \u00ab\u0634\u0647\u0631\u0632\u0627\u062f\u00bb \u062c\u0627\u0646 \u062a\u0627\u0632\u0647\u200c\u0627\u06cc \u0645\u06cc\u200c\u06af\u06cc\u0631\u062f.'
+                    '\u062f\u0631 \u062f\u0644 \u0627\u0641\u0633\u0627\u0646\u0647\u200c\u0647\u0627\u06cc \u0628\u0627\u0634\u06a9\u0648\u0647 \u0648 \u062f\u0627\u0633\u062a\u0627\u0646\u200c\u0647\u0627\u06cc \u062f\u0644\u200c\u0627\u0646\u06af\u06cc\u0632 \u0627\u06cc\u0631\u0627\u0646\u200c\u0632\u0645\u06cc\u0646\u060c \u0646\u0627\u0645 "\u0634\u0647\u0631\u0632\u0627\u062f" \u0647\u0645\u0686\u0646\u0627\u0646 \u0645\u06cc\u200c\u062f\u0631\u062e\u0634\u062f\u061b \u0628\u0627\u0646\u0648\u06cc\u06cc \u06a9\u0647 \u0628\u0627 \u0647\u0646\u0631 \u0631\u0648\u0627\u06cc\u062a\u06af\u0631\u06cc\u200c\u0627\u0634\u060c\n\u0633\u0631\u0646\u0648\u0634\u062a\u06cc \u0646\u0648 \u0628\u0631\u0627\u06cc \u0634\u0647\u0631\u06cc\u0627\u0631 \u0648 \u0645\u0631\u062f\u0645\u0627\u0646\u0634 \u0631\u0642\u0645 \u0632\u062f. \u0627\u06a9\u0646\u0648\u0646 \u0627\u06cc\u0646 \u0627\u0641\u0633\u0627\u0646\u0647 \u062f\u0631 \u067e\u0631\u0648\u0698\u0647\u200c\u06cc \u0645\u0633\u06a9\u0648\u0646\u06cc \u00ab\u0634\u0647\u0631\u0632\u0627\u062f\u00bb \u062c\u0627\u0646 \u062a\u0627\u0632\u0647\u200c\u0627\u06cc \u0645\u06cc\u200c\u06af\u06cc\u0631\u062f.'
                   }
                 </div>
                 <div
@@ -1829,7 +1750,7 @@ function PlasmicHomepage__RenderFunc(props: {
                   )}
                 >
                   {
-                    "\u062f\u0631 \u0634\u0647\u0631\u0632\u0627\u062f\u060c \u0633\u0627\u06a9\u0646\u0627\u0646 \u0647\u0631 \u0631\u0648\u0632 \u06af\u0627\u0645\u06cc \u0628\u0647 \u0633\u0648\u06cc \u062f\u0646\u06cc\u0627\u06cc\u06cc \u062e\u06cc\u0627\u0644\u200c\u0627\u0646\u06af\u06cc\u0632\n\u0628\u0631\u0645\u06cc\u200c\u062f\u0627\u0631\u0646\u062f\u061b \u062c\u0647\u0627\u0646\u06cc \u06a9\u0647 \u062f\u0631 \u0622\u0646\u060c \u0632\u0646\u062f\u06af\u06cc \u0628\u0647 \u0644\u0637\u0627\u0641\u062a \u0642\u0635\u0647\u200c\u0647\u0627\u06cc \u0647\u0632\u0627\u0631 \u0648 \u06cc\u06a9\n\u0634\u0628 \u0628\u0627\u0632\u0622\u0641\u0631\u06cc\u0646\u06cc \u0645\u06cc\u200c\u0634\u0648\u062f."
+                    "\u062f\u0631 \u0634\u0647\u0631\u0632\u0627\u062f\u060c \u0633\u0627\u06a9\u0646\u0627\u0646 \u0647\u0631 \u0631\u0648\u0632 \u06af\u0627\u0645\u06cc \u0628\u0647 \u0633\u0648\u06cc \u062f\u0646\u06cc\u0627\u06cc\u06cc \u062e\u06cc\u0627\u0644\u200c\u0627\u0646\u06af\u06cc\u0632\n\u0628\u0631\u0645\u06cc\u200c\u062f\u0627\u0631\u0646\u062f\u061b \u062c\u0647\u0627\u0646\u06cc \u06a9\u0647 \u062f\u0631 \u0622\u0646\u060c \u0632\u0646\u062f\u06af\u06cc \u0628\u0647 \u0644\u0637\u0627\u0641\u062a \u0642\u0635\u0647\u200c\u0647\u0627\u06cc \u0647\u0632\u0627\u0631 \u0648 \u06cc\u06a9 \u0634\u0628 \u0628\u0627\u0632\u0622\u0641\u0631\u06cc\u0646\u06cc \u0645\u06cc\u200c\u0634\u0648\u062f."
                   }
                 </div>
                 <div
@@ -1930,8 +1851,17 @@ function PlasmicHomepage__RenderFunc(props: {
               />
             </div>
           </section>
-          <section className={classNames(projectcss.all, sty.section__dx49N)}>
-            <div className={classNames(projectcss.all, sty.freeBox__bW6CA)}>
+          <section
+            data-plasmic-name={"askShahrzad"}
+            data-plasmic-override={overrides.askShahrzad}
+            className={classNames(projectcss.all, sty.askShahrzad)}
+            id={"consult-request"}
+          >
+            <Stack__
+              as={"div"}
+              hasGap={true}
+              className={classNames(projectcss.all, sty.freeBox__bW6CA)}
+            >
               <div
                 className={classNames(
                   projectcss.all,
@@ -1954,14 +1884,20 @@ function PlasmicHomepage__RenderFunc(props: {
                   "\u062f\u0631 \u0635\u0648\u0631\u062a\u06cc \u06a9\u0647 \u0639\u0644\u0627\u0642\u0647\u200c\u0645\u0646\u062f \u0628\u0647 \u0627\u06cc\u0646 \u067e\u0631\u0648\u0698\u0647 \u0647\u0633\u062a\u06cc\u0646 \u0648 \u0645\u06cc\u200c\u062e\u0648\u0627\u0647\u06cc\u062f \u00ab\u0634\u0647\u0631\u0632\u0627\u062f\u00bb \u0631\u0627 \u0628\u06cc\u0634\u062a\u0631 \u0628\u0634\u0646\u0627\u0633\u06cc\u062f\u060c \u0634\u0645\u0627\u0631\u0647 \u0645\u0648\u0628\u0627\u06cc\u0644 \u062e\u0648\u062f \u0631\u0627 \u0628\u0646\u0648\u06cc\u0633\u06cc\u062f.\n\u06a9\u0627\u0631\u0634\u0646\u0627\u0633\u0627\u0646 \u0648\u06cc\u0698\u0647 \u0645\u0627 \u062f\u0631 \u0627\u0648\u0644\u06cc\u0646 \u0641\u0631\u0635\u062a \u0628\u0627 \u0634\u0645\u0627 \u062a\u0645\u0627\u0633 \u0645\u06cc\u200c\u06af\u06cc\u0631\u0646\u062f."
                 }
               </div>
-            </div>
+            </Stack__>
           </section>
-          <section className={classNames(projectcss.all, sty.section__bnzTt)}>
+          <section
+            data-plasmic-name={"footer"}
+            data-plasmic-override={overrides.footer}
+            className={classNames(projectcss.all, sty.footer)}
+          >
             <div className={classNames(projectcss.all, sty.freeBox__ssN7A)}>
               <Stack__
                 as={"div"}
+                data-plasmic-name={"text"}
+                data-plasmic-override={overrides.text}
                 hasGap={true}
-                className={classNames(projectcss.all, sty.freeBox__tkO4)}
+                className={classNames(projectcss.all, sty.text)}
               >
                 <Stack__
                   as={"div"}
@@ -1974,10 +1910,12 @@ function PlasmicHomepage__RenderFunc(props: {
                   />
 
                   <div
+                    data-plasmic-name={"address"}
+                    data-plasmic-override={overrides.address}
                     className={classNames(
                       projectcss.all,
                       projectcss.__wab_text,
-                      sty.text__jWZmR
+                      sty.address
                     )}
                   >
                     {
@@ -2008,7 +1946,6 @@ function PlasmicHomepage__RenderFunc(props: {
 const PlasmicDescendants = {
   root: [
     "root",
-    "modal",
     "billboard",
     "mwdNavigationBar",
     "title",
@@ -2097,9 +2034,12 @@ const PlasmicDescendants = {
     "shahrzadImage",
     "namingText1",
     "namingText2",
-    "aboutMolka"
+    "aboutMolka",
+    "askShahrzad",
+    "footer",
+    "text",
+    "address"
   ],
-  modal: ["modal"],
   billboard: ["billboard", "mwdNavigationBar", "title", "shahrzadTitleLogo"],
   mwdNavigationBar: ["mwdNavigationBar"],
   title: ["title", "shahrzadTitleLogo"],
@@ -2427,14 +2367,17 @@ const PlasmicDescendants = {
   shahrzadImage: ["shahrzadImage"],
   namingText1: ["namingText1"],
   namingText2: ["namingText2"],
-  aboutMolka: ["aboutMolka"]
+  aboutMolka: ["aboutMolka"],
+  askShahrzad: ["askShahrzad"],
+  footer: ["footer", "text", "address"],
+  text: ["text", "address"],
+  address: ["address"]
 } as const;
 type NodeNameType = keyof typeof PlasmicDescendants;
 type DescendantsType<T extends NodeNameType> =
   (typeof PlasmicDescendants)[T][number];
 type NodeDefaultElementType = {
   root: "div";
-  modal: typeof Modal;
   billboard: "section";
   mwdNavigationBar: typeof MwdNavigationBar;
   title: "div";
@@ -2524,6 +2467,10 @@ type NodeDefaultElementType = {
   namingText1: "div";
   namingText2: "div";
   aboutMolka: "section";
+  askShahrzad: "section";
+  footer: "section";
+  text: "div";
+  address: "div";
 };
 
 type ReservedPropsType = "variants" | "args" | "overrides";
@@ -2586,7 +2533,6 @@ export const PlasmicHomepage = Object.assign(
   makeNodeComponent("root"),
   {
     // Helper components rendering sub-elements
-    modal: makeNodeComponent("modal"),
     billboard: makeNodeComponent("billboard"),
     mwdNavigationBar: makeNodeComponent("mwdNavigationBar"),
     title: makeNodeComponent("title"),
@@ -2686,6 +2632,10 @@ export const PlasmicHomepage = Object.assign(
     namingText1: makeNodeComponent("namingText1"),
     namingText2: makeNodeComponent("namingText2"),
     aboutMolka: makeNodeComponent("aboutMolka"),
+    askShahrzad: makeNodeComponent("askShahrzad"),
+    footer: makeNodeComponent("footer"),
+    text: makeNodeComponent("text"),
+    address: makeNodeComponent("address"),
 
     // Metadata about props expected for PlasmicHomepage
     internalVariantProps: PlasmicHomepage__VariantProps,

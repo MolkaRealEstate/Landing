@@ -118,6 +118,21 @@
           "id": "mtinV-a5FmX1",
           "name": "Icon11Icon",
           "moduleFilePath": "plasmic/landing/icons/PlasmicIcon__Icon11.tsx"
+        },
+        {
+          "id": "cuu-3l1WTiO_",
+          "name": "Icon12Icon",
+          "moduleFilePath": "plasmic/landing/icons/PlasmicIcon__Icon12.tsx"
+        },
+        {
+          "id": "XJmWDpjKKXWB",
+          "name": "Icon13Icon",
+          "moduleFilePath": "plasmic/landing/icons/PlasmicIcon__Icon13.tsx"
+        },
+        {
+          "id": "r5yguWMgSqn0",
+          "name": "Icon14Icon",
+          "moduleFilePath": "plasmic/landing/icons/PlasmicIcon__Icon14.tsx"
         }
       ],
       "images": [
@@ -230,19 +245,19 @@
           "componentImportPath": "./../../../src/components/Carousel"
         },
         {
-          "id": "h30UR6Lg_L-j",
+          "id": "KBsv2KiwbTaU",
           "name": "Modal",
           "displayName": "Modal",
           "componentImportPath": "./../../../src/fragment/components/Modal"
         },
         {
-          "id": "aXCpzvyTz2kv",
+          "id": "e8rBi6Bq_lhB",
           "name": "ApiRequest",
           "displayName": "ApiRequest",
           "componentImportPath": "./../../../src/fragment/components/ApiRequest"
         },
         {
-          "id": "-ahCt2vOzlex",
+          "id": "Q1MCFVaw8mcj",
           "name": "Fragment",
           "displayName": "Fragment",
           "componentImportPath": "./../../../src/fragment/fragment"
@@ -571,7 +586,7 @@
         }
       ],
       "indirect": true,
-      "globalContextsFilePath": "",
+      "globalContextsFilePath": "plasmic/core_components/PlasmicGlobalContextsProvider.tsx",
       "splitsProviderFilePath": "",
       "codeComponents": [
         {
@@ -591,10 +606,27 @@
           "name": "MWDCarousel",
           "displayName": "MWDCarousel",
           "componentImportPath": "./../../../src/components/Carousel"
+        },
+        {
+          "id": "mDM5-LtGmrjk",
+          "name": "Modal",
+          "displayName": "Modal",
+          "componentImportPath": "./../../../src/fragment/components/Modal"
+        },
+        {
+          "id": "BhsVqwYbFJFj",
+          "name": "ApiRequest",
+          "displayName": "ApiRequest",
+          "componentImportPath": "./../../../src/fragment/components/ApiRequest"
+        },
+        {
+          "id": "cah0ZE1JE0HL",
+          "name": "Fragment",
+          "displayName": "Fragment",
+          "componentImportPath": "./../../../src/fragment/fragment"
         }
       ],
-      "customFunctions": [],
-      "jsBundleThemes": []
+      "customFunctions": []
     },
     {
       "projectId": "8PtdGodUbexNYgkuyBUcWu",
@@ -616,7 +648,8 @@
           "componentImportPath": "@plasmicpkgs/plasmic-embed-css"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     }
   ],
   "globalVariants": {
